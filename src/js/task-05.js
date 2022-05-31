@@ -6,5 +6,13 @@ const outputRef = document.querySelector("#name-output");
 
 
 inputRef.addEventListener("input", (event) => {
+  if (event.currentTarget.value === '') {
+    console.log('yes')
+    outputRef.textContent = "Anonymous";
+    return
+  } 
   outputRef.textContent = event.currentTarget.value;
+  // console.log(event);
+  // console.log(event.currentTarget);
+  // console.log(event.currentTarget.value);
 });
